@@ -35,7 +35,7 @@ MODE_CONFIG = {
     "chat": {
         "model": "openrouter/auto",
         "max_tokens": 2048,
-        "prompt": "You are CortexAI, a helpful conversational assistant.",
+        "prompt": "You are NexoraAI, a helpful conversational assistant.",
     },
     "coding": {
         "model": "qwen/qwen3-coder-next",

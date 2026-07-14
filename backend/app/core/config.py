@@ -5,7 +5,7 @@ from pydantic_settings import BaseSettings
 class Settings(BaseSettings):
     model_config = ConfigDict(env_file=".env", extra="ignore")
 
-    app_name: str = "AI Platform"
+    app_name: str = "NexoraAI"
     api_v1_prefix: str = "/api/v1"
     openai_api_key: str | None = None
     anthropic_api_key: str | None = None
@@ -15,7 +15,7 @@ class Settings(BaseSettings):
     openrouter_api_key: str | None = None
     openrouter_default_model: str = "openrouter/auto"
     openrouter_site_url: str = "http://localhost:3000"
-    openrouter_app_name: str = "CortexAI"
+    openrouter_app_name: str = "NexoraAI"
     huggingface_api_key: str | None = None
 
 

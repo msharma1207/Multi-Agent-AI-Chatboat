@@ -7,7 +7,7 @@ services:
     ports:
       - "8000:8000"
     environment:
-      APP_NAME: AI Platform
+      APP_NAME: NexoraAI
       POSTGRES_HOST: postgres
       REDIS_HOST: redis
       QDRANT_HOST: qdrant

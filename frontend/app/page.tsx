@@ -168,7 +168,7 @@ export default function HomePage() {
 
   return <main className="app-shell">
     <aside className={`sidebar ${menu?'open':''}`}>
-      <div className="brand-row"><button className="plain-icon" aria-label="Collapse sidebar" onClick={()=>setMenu(false)}><Icon name="panel"/></button><strong>CortexAI</strong><span className="plan-badge">free</span><button className="plain-icon edit-button" aria-label="Compose new chat" onClick={newChat}><Icon name="edit"/></button></div>
+      <div className="brand-row"><button className="plain-icon" aria-label="Collapse sidebar" onClick={()=>setMenu(false)}><Icon name="panel"/></button><strong>NexoraAI</strong><span className="plan-badge">free</span><button className="plain-icon edit-button" aria-label="Compose new chat" onClick={newChat}><Icon name="edit"/></button></div>
       <button className="new-chat" onClick={newChat}><span>＋</span> New Chat</button>
       <div className="recent-section"><p className="section-label">RECENTS</p>{conversations.slice(0,8).map(item=><div key={item.id} className={`recent-item ${item.id===activeId?'active':''}`}><button className="recent-main" onClick={()=>void openConversation(item.id)}><span className="recent-icon"><Icon name="chat" size={17}/></span><span>{item.title}</span></button><button className="recent-action" aria-label={`Rename ${item.title}`} onClick={()=>void renameConversation(item)}><Icon name="edit" size={14}/></button><button className="recent-action danger" aria-label={`Delete ${item.title}`} onClick={()=>void deleteConversation(item)}><Icon name="trash" size={14}/></button></div>)}</div>
       <div className="profile-row"><div className="avatar">MS</div><div className="profile-copy"><strong>Mohit Sharma</strong><span>Free Plan</span></div><button className="gold-icon" aria-label="Invite link"><Icon name="link" size={18}/></button><button className="plain-icon" aria-label="Log out"><Icon name="logout" size={18}/></button></div>
@@ -182,13 +182,13 @@ export default function HomePage() {
         <div className="composer">
           <div className="mode-row">{modes.map(([label,icon])=><button key={label} className={`mode-pill ${label===mode?'active':''}`} onClick={()=>setMode(label)}><Icon name={icon} size={18}/>{label}</button>)}</div>
           {attachment&&<div className="attachment-chip"><Icon name="file" size={15}/><span>{attachment.name}</span><button aria-label="Remove attachment" onClick={()=>setAttachment(null)}>×</button></div>}
-          <textarea value={input} onChange={e=>setInput(e.target.value)} onKeyDown={keyDown} placeholder="Chat with CortexAI..." rows={2}/>
+          <textarea value={input} onChange={e=>setInput(e.target.value)} onKeyDown={keyDown} placeholder="Chat with NexoraAI..." rows={2}/>
           <div className="composer-tools"><div>
             <input ref={fileInput} className="hidden-file" type="file" accept=".txt,.md,.csv,.json,.html,.py,.js,.ts,text/*" onChange={selectFile}/>
             <button className="tool-button" aria-label="Attach file" onClick={()=>fileInput.current?.click()}><Icon name="clip"/></button>
             <button className={`tool-button ${listening?'listening':''}`} aria-label="Voice input" onClick={startVoice}><Icon name="mic"/></button>
           </div><button className="send-button" aria-label="Send" disabled={!input.trim()||loading} onClick={()=>void send()}><Icon name="send" size={18}/></button></div>
-        </div><p className="disclaimer">CortexAI can make mistakes. Check important information.</p>
+        </div><p className="disclaimer">NexoraAI can make mistakes. Check important information.</p>
       </footer>
     </section>
   </main>;

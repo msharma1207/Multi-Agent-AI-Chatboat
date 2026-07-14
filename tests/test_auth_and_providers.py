@@ -35,7 +35,7 @@ def test_provider_service_builds_compact_conversation_context() -> None:
         model="openrouter/auto",
         system_prompt="Be concise.",
         history=[
-            {"role": "user", "content": "My project is called CortexAI."},
+            {"role": "user", "content": "My project is called NexoraAI."},
             {"role": "assistant", "content": "Understood."},
         ],
         max_tokens=512,
